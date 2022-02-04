@@ -61,7 +61,7 @@
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRotation.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjectController.cs" />
-    <Compile Include="Assets\Scripts\HP.cs" />
+    <Compile Include="Assets\Scripts\DisplayBonuses.cs" />
     <Compile Include="Assets\Scripts\Bonus.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFly.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFlicker.cs" />

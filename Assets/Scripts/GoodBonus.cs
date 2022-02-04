@@ -6,19 +6,18 @@ namespace Maze
     public class GoodBonus : Bonus, IFly, IRotation
     {
        
-        float heightFly = 3f;
-        private float speedRotation;
-
+        float heightFly = 3f;       
+        public float speedRotation = 3;
         private DisplayBonuses _displayBonuses;
-
-        protected override void Interaction(int _damage)
-        {
-            _displayBonuses.Display(_damage);
-        }     
         private void Awake()
         {        
-            _displayBonuses = new DisplayBonuses();       
+            _displayBonuses = new DisplayBonuses();
+            _damage = -50;
         }      
+        protected override void Interaction(int _damage)
+        {
+            _displayBonuses.Display(_damage);    
+        }     
 
         public void Fly()
         {

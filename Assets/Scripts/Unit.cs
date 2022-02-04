@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Maze
 {
     public abstract class Unit : MonoBehaviour
@@ -10,8 +10,10 @@ namespace Maze
         public Rigidbody _rigidbody;
         public Transform _transform;
         private Vector3 movement;
+
         private float horizontal;
         private float vertical;
+
         public float Speed = 5;
         protected void Move()
         {
@@ -27,6 +29,5 @@ namespace Maze
                 Debug.Log("NO Rigidbody");
             }
         }
-    
     }
 }

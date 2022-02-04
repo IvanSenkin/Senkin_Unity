@@ -7,7 +7,7 @@ namespace Maze
 {
     public abstract class Bonus : MonoBehaviour, IInteractible
     {
-        [SerializeField] public int _damage;
+        public int _damage ;
         public bool IsInteractible { get; } = true;
         protected Color _color;
         private void Start()
@@ -21,7 +21,9 @@ namespace Maze
                 return;
             }
             Interaction(_damage);
-            Destroy(gameObject);          
+            Destroy(gameObject);
+            other.GetComponent<Player>().TakeDamage(_damage);
+            
         }
         protected abstract void Interaction(int _damage);
         public void Action()
