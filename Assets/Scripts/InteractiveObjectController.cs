@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Maze
 {
+<<<<<<< HEAD
     public sealed class InteractiveObjectController : MonoBehaviour
     {
         private Bonus[] _interactiveObject;
@@ -29,6 +30,19 @@ namespace Maze
             _interactiveObject = FindObjectsOfType<Bonus>();          
         }
           
+=======
+    public class InteractiveObjectController : MonoBehaviour
+    {
+        private Bonus[] _interactiveObject;
+
+        private void Awake()
+        {
+            _interactiveObject = FindObjectsOfType<Bonus>();
+        }
+
+       
+      
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         void Update()
         {
             for (int i = 0; i < _interactiveObject.Length; i++)
@@ -56,6 +70,7 @@ namespace Maze
             }
         }
     }
+<<<<<<< HEAD
    //public class InteractiveObj : MonoBehaviour
    // {
    //     private void Start()
@@ -69,4 +84,6 @@ namespace Maze
    //     }
    // }
 
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 }

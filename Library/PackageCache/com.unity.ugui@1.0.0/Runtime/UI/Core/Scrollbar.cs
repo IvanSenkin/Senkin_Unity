@@ -5,7 +5,11 @@ using UnityEngine.EventSystems;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Scrollbar", 36)]
+=======
+    [AddComponentMenu("UI/Scrollbar", 34)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [ExecuteAlways]
     [RequireComponent(typeof(RectTransform))]
     /// <summary>
@@ -424,9 +428,12 @@ namespace UnityEngine.UI
 
                         float change = axisCoordinate < 0 ? size : -size;
                         value += reverseValue ? change : -change;
+<<<<<<< HEAD
                         value = Mathf.Clamp01(value);
                         // Only keep 4 decimals of precision
                         value = Mathf.Round(value * 10000f) / 10000f;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                     }
                 }
                 yield return new WaitForEndOfFrame();

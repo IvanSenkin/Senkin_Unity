@@ -186,8 +186,13 @@ namespace UnityEngine.EventSystems
         }
 
         // walk up the tree till a common root between the last entered and the current entered is found
+<<<<<<< HEAD
         // send exit events up to (including) the common root. Then send enter events up to
         // (including) the common root.
+=======
+        // send exit events up to (but not inluding) the common root. Then send enter events up to
+        // (but not including the common root).
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         // Send move events before exit, after enter, and on hovered objects when pointer data has changed.
         protected void HandlePointerExitAndEnter(PointerEventData currentPointerData, GameObject newEnterTarget)
         {
@@ -235,6 +240,7 @@ namespace UnityEngine.EventSystems
 
                 while (t != null)
                 {
+<<<<<<< HEAD
                     ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerMoveHandler);
                     ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerExitHandler);
                     currentPointerData.hovered.Remove(t.gameObject);
@@ -242,6 +248,15 @@ namespace UnityEngine.EventSystems
                     // if we reach the common root break out!
                     if (commonRoot != null && commonRoot.transform == t)
                         break;
+=======
+                    // if we reach the common root break out!
+                    if (commonRoot != null && commonRoot.transform == t)
+                        break;
+
+                    ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerMoveHandler);
+                    ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerExitHandler);
+                    currentPointerData.hovered.Remove(t.gameObject);
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                     t = t.parent;
                 }
             }
@@ -252,14 +267,21 @@ namespace UnityEngine.EventSystems
             {
                 Transform t = newEnterTarget.transform;
 
+<<<<<<< HEAD
                 while (t != null)
+=======
+                while (t != null && t.gameObject != commonRoot)
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                 {
                     ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerEnterHandler);
                     ExecuteEvents.Execute(t.gameObject, currentPointerData, ExecuteEvents.pointerMoveHandler);
                     currentPointerData.hovered.Add(t.gameObject);
+<<<<<<< HEAD
 
                     if (commonRoot != null && commonRoot.transform == t)
                         break;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                     t = t.parent;
                 }
             }

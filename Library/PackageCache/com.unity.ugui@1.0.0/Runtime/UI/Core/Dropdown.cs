@@ -8,7 +8,11 @@ using UnityEngine.UI.CoroutineTween;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Legacy/Dropdown", 102)]
+=======
+    [AddComponentMenu("UI/Dropdown", 35)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [RequireComponent(typeof(RectTransform))]
     /// <summary>
     ///   A standard dropdown that presents a list of options when clicked, of which one can be chosen.
@@ -343,7 +347,10 @@ namespace UnityEngine.UI
         private List<DropdownItem> m_Items = new List<DropdownItem>();
         private TweenRunner<FloatTween> m_AlphaTweenRunner;
         private bool validTemplate = false;
+<<<<<<< HEAD
         private const int kHighSortingLayer = 30000;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
         private static OptionData s_NoOptionData = new OptionData();
 
@@ -594,7 +601,11 @@ namespace UnityEngine.UI
             RefreshShownValue();
         }
 
+<<<<<<< HEAD
         private void SetupTemplate(Canvas rootCanvas)
+=======
+        private void SetupTemplate()
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         {
             validTemplate = false;
 
@@ -654,6 +665,7 @@ namespace UnityEngine.UI
                 parentTransform = parentTransform.parent;
             }
 
+<<<<<<< HEAD
             // checks if a Canvas already exists before overriding it. (case 958281 - [UI] Child Canvas' Sorting Layer is changed to the same value as the parent)
             if (!templateGo.TryGetComponent<Canvas>(out _))
             {
@@ -663,6 +675,11 @@ namespace UnityEngine.UI
                 // popupCanvas used to assume the root canvas had the default sorting Layer, next line fixes (case 958281 - [UI] Dropdown list does not copy the parent canvas layer when the panel is opened)
                 popupCanvas.sortingLayerID = rootCanvas.sortingLayerID;
             }
+=======
+            Canvas popupCanvas = GetOrAddComponent<Canvas>(templateGo);
+            popupCanvas.overrideSorting = true;
+            popupCanvas.sortingOrder = 30000;
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
             // If we have a parent canvas, apply the same raycasters as the parent for consistency.
             if (parentCanvas != null)
@@ -763,13 +780,22 @@ namespace UnityEngine.UI
 
             if (!validTemplate)
             {
+<<<<<<< HEAD
                 SetupTemplate(rootCanvas);
+=======
+                SetupTemplate();
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                 if (!validTemplate)
                     return;
             }
 
             m_Template.gameObject.SetActive(true);
 
+<<<<<<< HEAD
+=======
+            // popupCanvas used to assume the root canvas had the default sorting Layer, next line fixes (case 958281 - [UI] Dropdown list does not copy the parent canvas layer when the panel is opened)
+            m_Template.GetComponent<Canvas>().sortingLayerID = rootCanvas.sortingLayerID;
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
             // Instantiate the drop-down template
             m_Dropdown = CreateDropdownList(m_Template.gameObject);

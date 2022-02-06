@@ -2,7 +2,11 @@ using System.Linq;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Effects/Position As UV1", 82)]
+=======
+    [AddComponentMenu("UI/Effects/Position As UV1", 16)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     /// <summary>
     /// An IVertexModifier which sets the raw vertex position into UV1 of the generated verts.
     /// </summary>

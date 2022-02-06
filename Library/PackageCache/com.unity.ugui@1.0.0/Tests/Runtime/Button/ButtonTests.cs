@@ -53,6 +53,11 @@ public class ButtonTests : IPrebuildSetup
 #endif
     }
 
+<<<<<<< HEAD
+=======
+    #region Press
+
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [Test]
     public void PressShouldCallClickHandler()
     {
@@ -85,6 +90,7 @@ public class ButtonTests : IPrebuildSetup
         Assert.False(called);
     }
 
+<<<<<<< HEAD
     [Test]
     public void SelectShouldHoldThePreviousStateAfterDisablingAndEnabling()
     {
@@ -98,6 +104,11 @@ public class ButtonTests : IPrebuildSetup
         button.enabled = true;
         Assert.True(button.isStateSelected, "Expected selected state to be true");
     }
+=======
+    #endregion
+
+    #region Submit
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
     [Test]
     public void SubmitShouldCallClickHandler()
@@ -131,6 +142,13 @@ public class ButtonTests : IPrebuildSetup
         Assert.False(called);
     }
 
+<<<<<<< HEAD
+=======
+    #endregion
+
+    #region Submit Transition
+
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [UnityTest]
     public IEnumerator SubmitShouldTransitionToPressedStateAndBackToNormal()
     {
@@ -148,4 +166,9 @@ public class ButtonTests : IPrebuildSetup
 
         Assert.True(button.isStateNormal);
     }
+<<<<<<< HEAD
+=======
+
+    #endregion
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 }

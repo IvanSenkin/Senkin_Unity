@@ -5,7 +5,11 @@ using UnityEngine.EventSystems;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Selectable", 35)]
+=======
+    [AddComponentMenu("UI/Selectable", 70)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [ExecuteAlways]
     [SelectionBase]
     [DisallowMultipleComponent]
@@ -440,7 +444,11 @@ namespace UnityEngine.UI
                 {
                     // if the parent group does not allow interaction
                     // we need to break
+<<<<<<< HEAD
                     if (m_CanvasGroupCache[i].enabled && !m_CanvasGroupCache[i].interactable)
+=======
+                    if (!m_CanvasGroupCache[i].interactable)
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                     {
                         groupAllowInteraction = false;
                         shouldBreak = true;
@@ -514,12 +522,15 @@ namespace UnityEngine.UI
                 Array.Copy(s_Selectables, temp, s_Selectables.Length);
                 s_Selectables = temp;
             }
+<<<<<<< HEAD
 
             if (EventSystem.current && EventSystem.current.currentSelectedGameObject == gameObject)
             {
                 hasSelection = true;
             }
 
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
             m_CurrentIndex = s_SelectableCount;
             s_Selectables[m_CurrentIndex] = this;
             s_SelectableCount++;
@@ -571,6 +582,7 @@ namespace UnityEngine.UI
             m_EnableCalled = false;
         }
 
+<<<<<<< HEAD
         void OnApplicationFocus(bool hasFocus)
         {
             if (!hasFocus && IsPressed())
@@ -579,6 +591,8 @@ namespace UnityEngine.UI
             }
         }
 
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 #if UNITY_EDITOR
         protected override void OnValidate()
         {
@@ -619,10 +633,17 @@ namespace UnityEngine.UI
                     return SelectionState.Disabled;
                 if (isPointerDown)
                     return SelectionState.Pressed;
+<<<<<<< HEAD
                 if (hasSelection)
                     return SelectionState.Selected;
                 if (isPointerInside)
                     return SelectionState.Highlighted;
+=======
+                if (isPointerInside)
+                    return SelectionState.Highlighted;
+                if (hasSelection)
+                    return SelectionState.Selected;
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                 return SelectionState.Normal;
             }
         }
@@ -1276,8 +1297,11 @@ namespace UnityEngine.UI
         /// </example>
         public virtual void OnPointerEnter(PointerEventData eventData)
         {
+<<<<<<< HEAD
             if (eventData == null || eventData.pointerEnter == null || eventData.pointerEnter.GetComponentInParent<Selectable>() != this)
                 return;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
             isPointerInside = true;
             EvaluateAndTransitionToSelectionState();
         }
@@ -1306,8 +1330,11 @@ namespace UnityEngine.UI
         /// </example>
         public virtual void OnPointerExit(PointerEventData eventData)
         {
+<<<<<<< HEAD
             if (eventData == null || eventData.pointerEnter == null || eventData.pointerEnter.GetComponentInParent<Selectable>() != this)
                 return;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
             isPointerInside = false;
             EvaluateAndTransitionToSelectionState();
         }

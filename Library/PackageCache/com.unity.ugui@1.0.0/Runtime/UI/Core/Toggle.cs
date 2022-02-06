@@ -12,7 +12,11 @@ namespace UnityEngine.UI
     /// The toggle component is a Selectable that controls a child graphic which displays the on / off state.
     /// When a toggle event occurs a callback is sent to any registered listeners of UI.Toggle._onValueChanged.
     /// </remarks>
+<<<<<<< HEAD
     [AddComponentMenu("UI/Toggle", 30)]
+=======
+    [AddComponentMenu("UI/Toggle", 31)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [RequireComponent(typeof(RectTransform))]
     public class Toggle : Selectable, IPointerClickHandler, ISubmitHandler, ICanvasElement
     {

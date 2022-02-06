@@ -4,7 +4,11 @@ using UnityEngine.Pool;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Effects/Shadow", 80)]
+=======
+    [AddComponentMenu("UI/Effects/Shadow", 14)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     /// <summary>
     /// Adds an outline to a graphic using IVertexModifier.
     /// </summary>

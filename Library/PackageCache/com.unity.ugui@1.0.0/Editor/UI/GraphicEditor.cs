@@ -35,7 +35,10 @@ namespace UnityEditor.UI
         {
             Tools.hidden = false;
             m_ShowNativeSize.valueChanged.RemoveListener(Repaint);
+<<<<<<< HEAD
             SceneView.duringSceneGui -= DrawAnchorsOnSceneView;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         }
 
         protected virtual void OnEnable()
@@ -56,8 +59,11 @@ namespace UnityEditor.UI
 
             m_ShowNativeSize = new AnimBool(false);
             m_ShowNativeSize.valueChanged.AddListener(Repaint);
+<<<<<<< HEAD
 
             SceneView.duringSceneGui += DrawAnchorsOnSceneView;
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         }
 
         public override void OnInspectorGUI()
@@ -70,6 +76,7 @@ namespace UnityEditor.UI
             serializedObject.ApplyModifiedProperties();
         }
 
+<<<<<<< HEAD
         void DrawAnchorsOnSceneView(SceneView sceneView)
         {
             if (!target || targets.Length > 1)
@@ -101,6 +108,8 @@ namespace UnityEditor.UI
             Handles.DrawLine(p3, p0);
         }
 
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         /// <summary>
         /// Set if the 'Set Native Size' button should be visible for this editor.
         /// </summary>
@@ -160,6 +169,7 @@ namespace UnityEditor.UI
         {
             EditorGUILayout.PropertyField(m_RaycastTarget);
 
+<<<<<<< HEAD
             float height = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
             if (m_ShowPadding)
                 height += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 4;
@@ -176,6 +186,9 @@ namespace UnityEditor.UI
                     SceneView.RepaintAll();
                 }
             }
+=======
+            m_ShowPadding = EditorGUILayout.Foldout(m_ShowPadding, m_PaddingContent);
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
             if (m_ShowPadding)
             {
@@ -184,6 +197,7 @@ namespace UnityEditor.UI
                     EditorGUI.indentLevel++;
                     Vector4 newPadding = m_RaycastPadding.vector4Value;
 
+<<<<<<< HEAD
                     rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                     newPadding.x = EditorGUI.FloatField(rect, m_LeftContent, newPadding.x);
 
@@ -195,6 +209,12 @@ namespace UnityEditor.UI
 
                     rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
                     newPadding.w = EditorGUI.FloatField(rect, m_TopContent, newPadding.w);
+=======
+                    newPadding.x = EditorGUILayout.FloatField(m_LeftContent, newPadding.x);
+                    newPadding.z = EditorGUILayout.FloatField(m_RightContent, newPadding.z);
+                    newPadding.w = EditorGUILayout.FloatField(m_TopContent, newPadding.w);
+                    newPadding.y = EditorGUILayout.FloatField(m_BottomContent, newPadding.y);
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
                     if (check.changed)
                     {
@@ -203,8 +223,11 @@ namespace UnityEditor.UI
                     EditorGUI.indentLevel--;
                 }
             }
+<<<<<<< HEAD
 
             EditorGUI.EndProperty();
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         }
     }
 }

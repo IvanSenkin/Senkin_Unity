@@ -9,6 +9,7 @@ namespace Maze
         float heightFly = 3f;       
         public float speedRotation = 3;
         private DisplayBonuses _displayBonuses;
+<<<<<<< HEAD
         [SerializeField] private Material _material;
         private void Awake()
         {
@@ -19,6 +20,16 @@ namespace Maze
         protected override void Interaction(int _damage)
         {
             //_displayBonuses.Display(_damage);    
+=======
+        private void Awake()
+        {        
+            _displayBonuses = new DisplayBonuses();
+            _damage = -50;
+        }      
+        protected override void Interaction(int _damage)
+        {
+            _displayBonuses.Display(_damage);    
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         }     
 
         public void Fly()

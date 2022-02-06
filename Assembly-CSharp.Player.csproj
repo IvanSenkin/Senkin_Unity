@@ -9,7 +9,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
+<<<<<<< HEAD
     <ProjectGuid>{2696C5B5-2E74-3D22-05BE-E9C1E41C95D0}</ProjectGuid>
+=======
+    <ProjectGuid>{473E9EDA-A868-5927-AF59-51F18439A38B}</ProjectGuid>
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,9 +61,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IRotation.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjectController.cs" />
+=======
+    <Compile Include="Assets\Scripts\Interfaces\ITakeDamage.cs" />
+    <Compile Include="Assets\Scripts\Unit.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IRotation.cs" />
+    <Compile Include="Assets\Scripts\InteractiveObjectController.cs" />
+    <Compile Include="Assets\Scripts\DisplayBonuses.cs" />
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     <Compile Include="Assets\Scripts\Bonus.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFly.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFlicker.cs" />
@@ -67,8 +79,11 @@
     <Compile Include="Assets\Scripts\GoodBonus.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractible.cs" />
     <Compile Include="Assets\Scripts\BadBonus.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Interfaces\ITakeDamage.cs" />
     <Compile Include="Assets\Scripts\Life.cs" />
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -614,6 +629,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
+<<<<<<< HEAD
       <Project>{55D55691-082B-C2EC-BB97-4809DDF31670}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
@@ -623,6 +639,17 @@
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{3C20CFF3-4C4F-4CF5-70D9-689E09C28D54}</Project>
+=======
+      <Project>{114F6313-0D4D-D493-100C-834ADB31152A}</Project>
+      <Name>Unity.Timeline.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{8F4C3604-85BC-11AA-C0E3-7DE96164BB3D}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{1235755B-E077-4996-006F-7F5562D0477A}</Project>
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

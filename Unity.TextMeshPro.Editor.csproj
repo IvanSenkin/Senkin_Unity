@@ -9,7 +9,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
+<<<<<<< HEAD
     <ProjectGuid>{46D095A3-906C-58E7-3FF5-ECE3DDBADE15}</ProjectGuid>
+=======
+    <ProjectGuid>{5EE205AF-4971-40EA-D097-F9AA9EEB8D1C}</ProjectGuid>
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.TextMeshPro.Editor</AssemblyName>
@@ -712,6 +716,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
+<<<<<<< HEAD
       <Project>{C1A0A308-3BD5-D5A1-8EF0-EBE71DB019C2}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
@@ -729,6 +734,25 @@
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{40BE916B-A87B-0726-E120-B7819CBBBA27}</Project>
+=======
+      <Project>{80AFA95C-EDA1-6CCA-6A8B-DCD1DE6D0DBD}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{F980E864-CA33-02C6-140C-46845C96C228}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{394BE665-34FA-FFAB-4C0C-C7EF4A860BE6}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{C5C8D53B-B022-2675-24C2-BC55D2E62075}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{5A89A318-F149-9632-B514-3398D39C0751}</Project>
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -5,7 +5,11 @@ using UnityEngine.Pool;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Rect Mask 2D", 14)]
+=======
+    [AddComponentMenu("UI/Rect Mask 2D", 13)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [ExecuteAlways]
     [DisallowMultipleComponent]
     [RequireComponent(typeof(RectTransform))]

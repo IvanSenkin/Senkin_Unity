@@ -4,7 +4,11 @@ using UnityEngine.EventSystems;
 
 namespace UnityEngine.UI
 {
+<<<<<<< HEAD
     [AddComponentMenu("UI/Slider", 34)]
+=======
+    [AddComponentMenu("UI/Slider", 33)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     [ExecuteAlways]
     [RequireComponent(typeof(RectTransform))]
     /// <summary>

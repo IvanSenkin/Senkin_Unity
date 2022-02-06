@@ -3,6 +3,11 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+<<<<<<< HEAD
+=======
+using UnityEngine.SceneManagement;
+using UnityEditor.Experimental.SceneManagement;
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
 namespace UnityEditor.UI
 {
@@ -12,6 +17,7 @@ namespace UnityEditor.UI
 
     static internal class MenuOptions
     {
+<<<<<<< HEAD
         enum MenuOptionsPriorityOrder
         {
             // 2000 - Text (TMP 4.0)
@@ -33,6 +39,8 @@ namespace UnityEditor.UI
             InputField = 2083,
         };
 
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         private const string kUILayerName = "UI";
 
         private const string kStandardSpritePath       = "UI/Skin/UISprite.psd";
@@ -202,7 +210,11 @@ namespace UnityEditor.UI
 
         // Graphic elements
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Legacy/Text", false, (int)MenuOptionsPriorityOrder.Text)]
+=======
+        [MenuItem("GameObject/UI/Text", false, 2000)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddText(MenuCommand menuCommand)
         {
             GameObject go;
@@ -211,7 +223,11 @@ namespace UnityEditor.UI
             PlaceUIElementRoot(go, menuCommand);
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Image", false, (int)MenuOptionsPriorityOrder.Image)]
+=======
+        [MenuItem("GameObject/UI/Image", false, 2001)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddImage(MenuCommand menuCommand)
         {
             GameObject go;
@@ -220,7 +236,11 @@ namespace UnityEditor.UI
             PlaceUIElementRoot(go, menuCommand);
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Raw Image", false, (int)MenuOptionsPriorityOrder.RawImage)]
+=======
+        [MenuItem("GameObject/UI/Raw Image", false, 2002)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddRawImage(MenuCommand menuCommand)
         {
             GameObject go;
@@ -233,7 +253,11 @@ namespace UnityEditor.UI
 
         // Button and toggle are controls you just click on.
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Legacy/Button", false, (int)MenuOptionsPriorityOrder.Button)]
+=======
+        [MenuItem("GameObject/UI/Button", false, 2030)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddButton(MenuCommand menuCommand)
         {
             GameObject go;
@@ -242,7 +266,11 @@ namespace UnityEditor.UI
             PlaceUIElementRoot(go, menuCommand);
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Toggle", false, (int)MenuOptionsPriorityOrder.Toggle)]
+=======
+        [MenuItem("GameObject/UI/Toggle", false, 2031)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddToggle(MenuCommand menuCommand)
         {
             GameObject go;
@@ -253,7 +281,11 @@ namespace UnityEditor.UI
 
         // Slider and Scrollbar modify a number
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Slider", false, (int)MenuOptionsPriorityOrder.Slider)]
+=======
+        [MenuItem("GameObject/UI/Slider", false, 2033)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddSlider(MenuCommand menuCommand)
         {
             GameObject go;
@@ -262,7 +294,11 @@ namespace UnityEditor.UI
             PlaceUIElementRoot(go, menuCommand);
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Scrollbar", false, (int)MenuOptionsPriorityOrder.Scrollbar)]
+=======
+        [MenuItem("GameObject/UI/Scrollbar", false, 2034)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddScrollbar(MenuCommand menuCommand)
         {
             GameObject go;
@@ -273,7 +309,11 @@ namespace UnityEditor.UI
 
         // More advanced controls below
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Legacy/Dropdown", false, (int)MenuOptionsPriorityOrder.Dropdown)]
+=======
+        [MenuItem("GameObject/UI/Dropdown", false, 2035)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddDropdown(MenuCommand menuCommand)
         {
             GameObject go;
@@ -282,7 +322,11 @@ namespace UnityEditor.UI
             PlaceUIElementRoot(go, menuCommand);
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Legacy/Input Field", false, (int)MenuOptionsPriorityOrder.InputField)]
+=======
+        [MenuItem("GameObject/UI/Input Field", false, 2036)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         public static void AddInputField(MenuCommand menuCommand)
         {
             GameObject go;
@@ -293,7 +337,11 @@ namespace UnityEditor.UI
 
         // Containers
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Canvas", false, (int)MenuOptionsPriorityOrder.Canvas)]
+=======
+        [MenuItem("GameObject/UI/Canvas", false, 2060)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddCanvas(MenuCommand menuCommand)
         {
             var go = CreateNewUI();
@@ -309,7 +357,11 @@ namespace UnityEditor.UI
             Selection.activeGameObject = go;
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Panel", false, (int)MenuOptionsPriorityOrder.Panel)]
+=======
+        [MenuItem("GameObject/UI/Panel", false, 2061)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddPanel(MenuCommand menuCommand)
         {
             GameObject go;
@@ -323,7 +375,11 @@ namespace UnityEditor.UI
             rect.sizeDelta = Vector2.zero;
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Scroll View", false, (int)MenuOptionsPriorityOrder.ScrollView)]
+=======
+        [MenuItem("GameObject/UI/Scroll View", false, 2062)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         static public void AddScrollView(MenuCommand menuCommand)
         {
             GameObject go;
@@ -363,7 +419,11 @@ namespace UnityEditor.UI
             return root;
         }
 
+<<<<<<< HEAD
         [MenuItem("GameObject/UI/Event System", false, (int)MenuOptionsPriorityOrder.EventSystem)]
+=======
+        [MenuItem("GameObject/UI/Event System", false, 2100)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         public static void CreateEventSystem(MenuCommand menuCommand)
         {
             GameObject parent = menuCommand.context as GameObject;

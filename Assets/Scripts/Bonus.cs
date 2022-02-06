@@ -7,12 +7,18 @@ namespace Maze
 {
     public abstract class Bonus : MonoBehaviour, IInteractible
     {
+<<<<<<< HEAD
         public int _damage;
         public int value;
         public bool IsInteractible { get; } = true;
         protected Color _color;
        
           
+=======
+        public int _damage ;
+        public bool IsInteractible { get; } = true;
+        protected Color _color;
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         private void Start()
         {
             Action();
@@ -24,10 +30,16 @@ namespace Maze
                 return;
             }
             Interaction(_damage);
+<<<<<<< HEAD
             other.GetComponent<Player>().TakeDamage(_damage);
             Destroy(gameObject);
 
            
+=======
+            Destroy(gameObject);
+            other.GetComponent<Player>().TakeDamage(_damage);
+            
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         }
         protected abstract void Interaction(int _damage);
         public void Action()

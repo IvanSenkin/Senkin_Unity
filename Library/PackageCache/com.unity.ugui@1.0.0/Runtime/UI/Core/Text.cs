@@ -4,7 +4,11 @@ using System.Collections.Generic;
 namespace UnityEngine.UI
 {
     [RequireComponent(typeof(CanvasRenderer))]
+<<<<<<< HEAD
     [AddComponentMenu("UI/Legacy/Text", 100)]
+=======
+    [AddComponentMenu("UI/Text", 10)]
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
     /// <summary>
     /// The default Graphic to draw font data to screen.
     /// </summary>
@@ -584,7 +588,11 @@ namespace UnityEngine.UI
 #if UNITY_EDITOR
         protected override void Reset()
         {
+<<<<<<< HEAD
             AssignDefaultFontIfNecessary();
+=======
+            AssignDefaultFont();
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         }
 
 #endif
@@ -593,12 +601,15 @@ namespace UnityEngine.UI
             font = Resources.GetBuiltinResource<Font>("Arial.ttf");
         }
 
+<<<<<<< HEAD
         internal void AssignDefaultFontIfNecessary()
         {
             if (font == null)
                 font = Resources.GetBuiltinResource<Font>("Arial.ttf");
         }
 
+=======
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
         /// <summary>
         /// Convenience function to populate the generation setting for the text.
         /// </summary>

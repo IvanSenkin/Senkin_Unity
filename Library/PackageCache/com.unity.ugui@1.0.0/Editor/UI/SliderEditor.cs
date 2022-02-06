@@ -61,19 +61,28 @@ namespace UnityEditor.UI
 
                 EditorGUI.BeginChangeCheck();
                 float newMin = EditorGUILayout.FloatField("Min Value", m_MinValue.floatValue);
+<<<<<<< HEAD
                 if (EditorGUI.EndChangeCheck() && m_WholeNumbers.boolValue ? Mathf.Round(newMin) < m_MaxValue.floatValue : newMin < m_MaxValue.floatValue)
+=======
+                if (EditorGUI.EndChangeCheck() && newMin <= m_MaxValue.floatValue)
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                 {
                     m_MinValue.floatValue = newMin;
                 }
 
                 EditorGUI.BeginChangeCheck();
                 float newMax = EditorGUILayout.FloatField("Max Value", m_MaxValue.floatValue);
+<<<<<<< HEAD
                 if (EditorGUI.EndChangeCheck() && m_WholeNumbers.boolValue ? Mathf.Round(newMax) > m_MinValue.floatValue : newMax > m_MinValue.floatValue)
+=======
+                if (EditorGUI.EndChangeCheck() && newMax >= m_MinValue.floatValue)
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
                 {
                     m_MaxValue.floatValue = newMax;
                 }
 
                 EditorGUILayout.PropertyField(m_WholeNumbers);
+<<<<<<< HEAD
 
                 bool areMinMaxEqual = (m_MinValue.floatValue == m_MaxValue.floatValue);
 
@@ -83,6 +92,9 @@ namespace UnityEditor.UI
                 EditorGUI.BeginDisabledGroup(areMinMaxEqual);
                 EditorGUILayout.Slider(m_Value, m_MinValue.floatValue, m_MaxValue.floatValue);
                 EditorGUI.EndDisabledGroup();
+=======
+                EditorGUILayout.Slider(m_Value, m_MinValue.floatValue, m_MaxValue.floatValue);
+>>>>>>> be46c89f4083feb7e2791fbb737358b582c207d2
 
                 bool warning = false;
                 foreach (var obj in serializedObject.targetObjects)
